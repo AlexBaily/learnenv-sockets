@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
     labels:
@@ -16,5 +16,8 @@ spec:
         spec:
             containers:
             - image: alexbaily/sockets:latest
-              imagePullPolicy: IfNotPresent
+              imagePullPolicy: Always
               name: backend-sockets
+              ports:
+                - containerPort: 8080
+

@@ -9,7 +9,10 @@ func StartServer(connPort string) {
 
 	ln, _ := net.Listen("tcp", connPort)
 
-	conn, _ := ln.Accept()
+	conn, err := ln.Accept()
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	for {
 		fmt.Println(conn)

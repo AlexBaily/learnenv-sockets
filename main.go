@@ -14,7 +14,7 @@ var (
 func init() {
 	//Grab env variable but set default to 8080
 	if connPort = os.Getenv("CONN_PORT"); connPort == "" {
-		connPort = "8080"
+		connPort = ":8080"
 	}
 }
 

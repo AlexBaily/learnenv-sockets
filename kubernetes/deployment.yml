@@ -15,7 +15,7 @@ spec:
                 app: backend-sockets
         spec:
             containers:
-            - image: alexbaily/sockets:latest
+            - image: alexbaily/learnenv-sockets:latest
               imagePullPolicy: Always
               name: backend-sockets
               ports:
